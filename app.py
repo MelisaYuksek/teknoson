@@ -177,19 +177,22 @@ def generate_features(input_data):
     except Exception as e:
         raise Exception(f"Özellik üretiminde hata: {str(e)}")
 
+# Kök rota (/) artık anasayfayı gösterecek.
 @app.route("/")
-def tahmin_yap():
-    return render_template("index.html")
-
-@app.route("/anasayfa.html")
 def anasayfa():
     return render_template("anasayfa.html")
 
-@app.route("/model.html")
+# Tahmin yap sayfası için ayrı bir rota tanımlayın.
+@app.route("/tahmin-yap")
+def tahmin_yap():
+    return render_template("index.html")
+
+# Diğer sayfalar için uzantısız rotaları kullanın.
+@app.route("/model")
 def model_sayfasi():
     return render_template("model.html")
 
-@app.route("/veltrixai.html")
+@app.route("/veltrixai")
 def veltrix_ai_sayfasi():
     return render_template("veltrixai.html")
 

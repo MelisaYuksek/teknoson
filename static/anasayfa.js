@@ -1,31 +1,45 @@
 // static/anasayfa.js
 
-/**
- * Bu dosya, ana sayfaya özgü JavaScript işlevlerini içerir.
- * Örneğin:
- * - Sayfa yüklendiğinde bir karşılama animasyonu başlatma
- * - Butona tıklandığında yumuşak kaydırma efekti (smooth scroll)
- * - Kartların üzerine gelindiğinde bir efekt uygulama
- */
+const galleryImages = [
+    '/static/images/ana-sayfa-arkaplan.jpg',
+    'https://i.ibb.co/1qG7XgP/galeri-2.jpg',
+    'https://i.ibb.co/T4XhJmF/galeri-3.jpg'
+];
+
+let currentImageIndex = 0;
+const heroSection = document.querySelector('.hero-gallery');
+const indicatorsContainer = document.querySelector('.gallery-indicators');
+
+function updateGallery() {
+    heroSection.style.backgroundImage = `url('${galleryImages[currentImageIndex]}')`;
+    updateIndicators();
+}
+
+function updateIndicators() {
+    indicatorsContainer.innerHTML = '';
+    galleryImages.forEach((_, index) => {
+        const indicator = document.createElement('div');
+        indicator.className = 'gallery-indicator';
+        if (index === currentImageIndex) {
+            indicator.classList.add('active');
+        }
+        indicator.addEventListener('click', () => {
+            currentImageIndex = index;
+            updateGallery();
+        });
+        indicatorsContainer.appendChild(indicator);
+    });
+}
+
+function autoChangeImage() {
+    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+    updateGallery();
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Anasayfa JavaScript'i başarıyla yüklendi.");
     
-    // Örnek: "Tahmin Yapmaya Başla" butonuna tıklandığında
-    const heroButton = document.querySelector(".hero-button");
-    if (heroButton) {
-        heroButton.addEventListener("click", (e) => {
-            // İsterseniz buraya bir animasyon veya loglama kodu ekleyebilirsiniz.
-            console.log("Tahmin yapmaya başla butonuna tıklandı.");
-        });
-    }
-
-    // Örnek: Kartların üzerine gelindiğinde bir loglama
-    const featureCards = document.querySelectorAll(".feature-cards .card");
-    featureCards.forEach(card => {
-        card.addEventListener("mouseenter", () => {
-            // Kartın hover durumunu izleyebilirsiniz.
-            // console.log("Kartın üzerine gelindi.");
-        });
-    });
+    // Galeriyi başlat
+    updateGallery();
+    setInterval(autoChangeImage, 5000); // 5 saniyede bir fotoğrafı değiştir
 });
