@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Model Hakkında - Uçuş İptal Tahmin Sistemi</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/model.css" />
+</head>
+<body>
+    <div class="mobile-overlay"></div>
+    <div class="top-bar">
+        <div class="search">🔎︎ Ara</div>
+        <div class="lang">🌍︎ TR-INT</div>
+    </div>
+
+    <header>
+        <div class="header-logo">
+            <img src="/static/images/veltrixai2.png" width="60" height="60" alt="Veltrix Logo" />
+        </div>
+        <h1>UÇUŞ İPTAL TAHMİN SİSTEMİ</h1>
+        <nav class="header-nav">
+            <a href="/anasayfa.html">ANASAYFA</a>
+            <a href="/">TAHMİN YAP</a>
+            <a href="/model.html">MODEL</a>
+            <a href="/veltrixai.html">VELTRIXAI</a>
+        </nav>
+        <div class="mobile-menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <div class="container model-container">
+            <h2 class="page-title">Tahmin Modelimiz</h2>
+            <p class="intro-text">
+                Uçuş İptal Tahmin Sistemi, yüksek doğruluk oranına sahip, gelişmiş bir **XGBoost makine öğrenimi modeli** kullanılarak geliştirilmiştir. Modelimiz, milyonlarca uçuş ve hava durumu verisiyle eğitilerek uçuş iptali riskini en doğru şekilde belirlemeyi hedefler.
+            </p>
+            <div class="model-section">
+                <h3>Model Mimarisi</h3>
+                <p>
+                    Modelimiz, XGBoost (Extreme Gradient Boosting) algoritmasını kullanır. Bu algoritma, karar ağaçlarını bir araya getirerek güçlü ve tutarlı tahminler yapmasını sağlar. Model, karmaşık ilişkileri öğrenme ve aşırı uydurma (overfitting) riskini azaltma konusunda oldukça başarılıdır.
+                </p>
+                <img src="https://i.ibb.co/hV7297s/xgboost-model.png" alt="XGBoost Modeli Şeması" class="model-image">
+            </div>
+            <div class="model-section">
+                <h3>Kullanılan Özellikler</h3>
+                <p>Tahminler, aşağıdaki gibi çeşitli kritik özelliklere dayanır:</p>
+                <ul>
+                    <li>**Tarihsel Veriler:** Ay, gün, hafta içi/hafta sonu gibi takvim bilgileri.</li>
+                    <li>**Uçuş Verileri:** Uçuş süresi, mesafe ve havaalanı kodları.</li>
+                    <li>**Hava Durumu:** Kalkış ve varış havaalanındaki sıcaklık, rüzgar hızı, basınç ve nem.</li>
+                </ul>
+                <img src="https://i.ibb.co/3k8xQjV/features-model.png" alt="Model Özellikleri" class="model-image">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Uçuş İptal Tahmin Sistemi | Tüm hakları saklıdır.</p>
+    </footer>
+    <script src="/static/script.js"></script>
+    <script src="/static/model.js"></script>
+</body>
+</html>
