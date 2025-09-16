@@ -13,17 +13,19 @@
         <div class="search">🔎︎ Ara</div>
         <div class="lang">🌍︎ TR-INT</div>
     </div>
-
+    
     <header>
         <div class="header-logo">
-            <img src="/static/images/veltrixai2.png" width="60" height="60" alt="Veltrix Logo" />
+            <a href="/">
+                <img src="/static/images/veltrixai2.png" width="60" height="60" alt="Veltrix Logo" />
+            </a>
         </div>
         <h1>UÇUŞ İPTAL TAHMİN SİSTEMİ</h1>
         <nav class="header-nav">
-            <a href="/anasayfa.html">ANASAYFA</a>
-            <a href="/">TAHMİN YAP</a>
-            <a href="/model.html">MODEL</a>
-            <a href="/veltrixai.html">VELTRIXAI</a>
+            <a href="/">ANASAYFA</a>
+            <a href="/tahmin-yap">TAHMİN YAP</a>
+            <a href="/model">MODEL</a>
+            <a href="/veltrixai">VELTRIXAI</a>
         </nav>
         <div class="mobile-menu-toggle">
             <span></span>
@@ -32,36 +34,44 @@
         </div>
     </header>
 
-    <main>
-        <div class="container model-container">
-            <h2 class="page-title">Tahmin Modelimiz</h2>
-            <p class="intro-text">
-                Uçuş İptal Tahmin Sistemi, yüksek doğruluk oranına sahip, gelişmiş bir **XGBoost makine öğrenimi modeli** kullanılarak geliştirilmiştir. Modelimiz, milyonlarca uçuş ve hava durumu verisiyle eğitilerek uçuş iptali riskini en doğru şekilde belirlemeyi hedefler.
-            </p>
-            <div class="model-section">
-                <h3>Model Mimarisi</h3>
-                <p>
-                    Modelimiz, XGBoost (Extreme Gradient Boosting) algoritmasını kullanır. Bu algoritma, karar ağaçlarını bir araya getirerek güçlü ve tutarlı tahminler yapmasını sağlar. Model, karmaşık ilişkileri öğrenme ve aşırı uydurma (overfitting) riskini azaltma konusunda oldukça başarılıdır.
-                </p>
-                <img src="https://i.ibb.co/hV7297s/xgboost-model.png" alt="XGBoost Modeli Şeması" class="model-image">
+    <main class="page-main model-page">
+        <section class="section-container content-container">
+            <h2>Model Yapısı ve Yaklaşımımız</h2>
+            <div class="content-item">
+                <div class="content-text">
+                    <h3>Özgün ve Genelleştirilebilir Çözüm</h3>
+                    <p>Türkiye'deki veri eksikliğine karşı, küresel veri setlerini yerel dinamiklerle (hava durumu gibi) birleştiren özgün bir yaklaşım geliştirdik. Bu sayede, modelimiz herhangi bir coğrafyaya kolayca uyarlanabilir, tamamen genelleştirilebilir bir yapıya sahiptir.</p>
+                </div>
+                <div class="content-image">
+                    <img src="/static/images/model-diagram.png" alt="Model Diagramı" />
+                </div>
             </div>
-            <div class="model-section">
-                <h3>Kullanılan Özellikler</h3>
-                <p>Tahminler, aşağıdaki gibi çeşitli kritik özelliklere dayanır:</p>
-                <ul>
-                    <li>**Tarihsel Veriler:** Ay, gün, hafta içi/hafta sonu gibi takvim bilgileri.</li>
-                    <li>**Uçuş Verileri:** Uçuş süresi, mesafe ve havaalanı kodları.</li>
-                    <li>**Hava Durumu:** Kalkış ve varış havaalanındaki sıcaklık, rüzgar hızı, basınç ve nem.</li>
-                </ul>
-                <img src="https://i.ibb.co/3k8xQjV/features-model.png" alt="Model Özellikleri" class="model-image">
+
+            <div class="content-item reverse">
+                <div class="content-text">
+                    <h3>Minimal Veri Girişi, Maksimum Değer</h3>
+                    <p>Kullanıcılarımızın sadece bilet üzerindeki temel bilgileri (kalkış/varış noktası, tarih) girerek yüksek doğrulukta tahminlere ulaşmasını sağlıyoruz. Geliştirdiğimiz model, veri sızıntısı olmayan yapısıyla güvenilir ve anlamlı çıktılar sunar.</p>
+                </div>
+                <div class="content-image">
+                    <img src="/static/images/features-model.png" alt="Özellikler" />
+                </div>
             </div>
-        </div>
+
+            <div class="content-item">
+                <div class="content-text">
+                    <h3>Kapsamlı Karar Desteği</h3>
+                    <p>Amacımız sadece bir tahmin yapmak değil, bu tahmini kullanıcıların seyahat planlamalarını veya süreç optimizasyonlarını destekleyecek akıllı ve uygulanabilir kararlara dönüştürmektir.</p>
+                </div>
+                <div class="content-image">
+                    <img src="/static/images/mission-ai.png" alt="Karar Desteği" />
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>© 2025 Uçuş İptal Tahmin Sistemi | Tüm hakları saklıdır.</p>
     </footer>
     <script src="/static/script.js"></script>
-    <script src="/static/model.js"></script>
 </body>
 </html>

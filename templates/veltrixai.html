@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>VeltrixAI Hakkında - Uçuş İptal Tahmin Sistemi</title>
+    <title>VeltrixAI Ekibi - Uçuş İptal Tahmin Sistemi</title>
     <link rel="stylesheet" href="/static/style.css" />
     <link rel="stylesheet" href="/static/veltrixai.css" />
 </head>
@@ -13,17 +13,19 @@
         <div class="search">🔎︎ Ara</div>
         <div class="lang">🌍︎ TR-INT</div>
     </div>
-
+    
     <header>
         <div class="header-logo">
-            <img src="/static/images/veltrixai2.png" width="60" height="60" alt="Veltrix Logo" />
+            <a href="/">
+                <img src="/static/images/veltrixai2.png" width="60" height="60" alt="Veltrix Logo" />
+            </a>
         </div>
         <h1>UÇUŞ İPTAL TAHMİN SİSTEMİ</h1>
         <nav class="header-nav">
-            <a href="/anasayfa.html">ANASAYFA</a>
-            <a href="/">TAHMİN YAP</a>
-            <a href="/model.html">MODEL</a>
-            <a href="/veltrixai.html">VELTRIXAI</a>
+            <a href="/">ANASAYFA</a>
+            <a href="/tahmin-yap">TAHMİN YAP</a>
+            <a href="/model">MODEL</a>
+            <a href="/veltrixai">VELTRIXAI</a>
         </nav>
         <div class="mobile-menu-toggle">
             <span></span>
@@ -32,33 +34,47 @@
         </div>
     </header>
 
-    <main>
-        <div class="container veltrixai-container">
-            <h2 class="page-title">VeltrixAI Kimdir?</h2>
-            <p class="intro-text">
-                VeltrixAI, yapay zeka ve veri bilimi alanında yenilikçi çözümler üretmeyi hedefleyen tutkulu bir ekiptir. Amacımız, karmaşık sorunları çözmek ve günlük yaşamı kolaylaştırmak için teknolojiyi kullanmaktır.
-            </p>
-            <div class="veltrix-section">
-                <h3>Misyonumuz</h3>
-                <p>
-                    Veri odaklı kararlar alabilmeniz için size güçlü araçlar sunmak. Her alanda yapay zekanın potansiyelini ortaya çıkarmak ve bilgiye erişimi demokratikleştirmektir.
-                </p>
-                <img src="https://i.ibb.co/K21h12P/mission-ai.png" alt="Misyonumuz" class="veltrix-image">
+    <main class="page-main veltrixai-page">
+        <section class="section-container content-container">
+            <h2>VeltrixAI Kimdir?</h2>
+            <p class="intro-text">VeltrixAI, havacılık sektöründeki en büyük sorunlardan biri olan uçuş gecikme ve iptallerine inovatif ve özgün bir çözüm sunmak amacıyla bir araya gelmiş genç ve dinamik bir ekibin projesidir. Kısıtlı verilere rağmen yüksek katma değer yaratmayı hedeflemektedir.</p>
+        </section>
+
+        <section class="section-container team-section">
+            <h3>Ekip Üyeleri</h3>
+            <div class="team-cards">
+                <div class="team-card">
+                    <img src="/static/images/team-ai.png" alt="M. Emin Altay" class="team-photo">
+                    <h4>Muhammed Emin ALTAY</h4>
+                    <span>Kurucu / Takım Lideri</span>
+                </div>
+                <div class="team-card">
+                    <img src="/static/images/team-ai.png" alt="Batuhan Özdemir" class="team-photo">
+                    <h4>Batuhan ÖZDEMİR</h4>
+                    <span>Veri Bilimci</span>
+                </div>
+                <div class="team-card">
+                    <img src="/static/images/team-ai.png" alt="Melisa Yüksek" class="team-photo">
+                    <h4>Melisa YÜKSEK</h4>
+                    <span>Yapay Zeka Geliştirici</span>
+                </div>
+                <div class="team-card">
+                    <img src="/static/images/team-ai.png" alt="Sümeyye Nurlu" class="team-photo">
+                    <h4>Sümeyye NURLU</h4>
+                    <span>Yapay Zeka Geliştirici</span>
+                </div>
+                <div class="team-card">
+                    <img src="/static/images/team-ai.png" alt="Esma Nur Çandik" class="team-photo">
+                    <h4>Esma Nur ÇANDİK</h4>
+                    <span>Arayüz Tasarımcısı</span>
+                </div>
             </div>
-            <div class="veltrix-section">
-                <h3>Ekibimiz</h3>
-                <p>
-                    VeltrixAI, alanında uzman mühendisler, veri bilimciler ve tasarımcılardan oluşan dinamik bir topluluktur. Her birimiz, projelerimize benzersiz bir bakış açısı getirerek en iyi sonuçları elde etmek için çalışıyoruz.
-                </p>
-                <img src="https://i.ibb.co/Jz5T15p/team-ai.png" alt="Ekibimiz" class="veltrix-image">
-            </div>
-        </div>
+        </section>
     </main>
 
     <footer>
         <p>© 2025 Uçuş İptal Tahmin Sistemi | Tüm hakları saklıdır.</p>
     </footer>
     <script src="/static/script.js"></script>
-    <script src="/static/veltrixai.js"></script>
 </body>
 </html>

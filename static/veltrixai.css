@@ -1,53 +1,76 @@
 /* veltrixai.css */
 
-.veltrixai-container {
-    max-width: 900px;
-    padding: 40px;
-}
-
-.page-title {
-    text-align: center;
+.veltrixai-page h2 {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    text-align: center;
     margin-bottom: 20px;
+    color: var(--primary-color);
 }
 
 .intro-text {
     text-align: center;
     font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 50px;
     line-height: 1.6;
     color: #555;
+}
+
+.team-section h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-color);
     margin-bottom: 40px;
 }
 
-.veltrix-section {
-    background-color: #f9f9f9;
-    border: 1px solid #e0e0e0;
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.team-card {
+    background: white;
+    padding: 25px;
     border-radius: 12px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    flex: 1;
+    min-width: 180px;
+    max-width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.veltrix-section h3 {
-    font-size: 1.8rem;
-    color: #333;
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.team-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 15px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
+    border: 3px solid var(--primary-color);
 }
 
-.veltrix-section p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-    margin-bottom: 20px;
+.team-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--text-color);
 }
 
-.veltrix-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.team-card span {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+@media (max-width: 768px) {
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
 }

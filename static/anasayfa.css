@@ -6,42 +6,27 @@
     display: block;
 }
 
+/* Minimalist Hero Bölümü */
 .hero-section {
     position: relative;
-    height: 100vh;
+    height: 60vh; /* Daha kısa bir yükseklik */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/static/images/ana-sayfa-arkaplan.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    background-size: cover;
-    background-position: center;
-    transition: background-image 1s ease-in-out;
-}
-
-.hero-gallery {
-    background-image: url('https://i.ibb.co/yY1s6gB/ana-sayfa-arkaplan.jpg'); /* Varsayılan görsel */
-}
-
-.gallery-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    z-index: 1;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
     max-width: 800px;
     padding: 0 20px;
 }
 
 .hero-content h2 {
-    font-size: 3.5rem;
+    font-size: 3rem; /* Daha küçük başlık */
     font-weight: 700;
     margin-bottom: 20px;
     text-shadow: 0 2px 8px rgba(0,0,0,0.4);
@@ -64,32 +49,19 @@
     transform: translateY(-2px);
 }
 
-.gallery-indicators {
-    position: absolute;
-    bottom: 20px;
-    z-index: 2;
-    display: flex;
-    gap: 10px;
-}
-
-.gallery-indicator {
-    width: 10px;
-    height: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.gallery-indicator.active {
-    background-color: white;
-    transform: scale(1.2);
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 40px;
+    font-weight: 700;
 }
 
 .info-section {
     padding: 80px 20px;
 }
 
+/* Kartları yan yana getirmek için Flexbox */
 .info-section .container {
     display: flex;
     flex-wrap: wrap;
@@ -140,5 +112,8 @@
 @media (max-width: 768px) {
     .hero-content h2 {
         font-size: 2.5rem;
+    }
+    .info-section .container {
+        flex-direction: column;
     }
 }
