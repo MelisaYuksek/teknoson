@@ -115,5 +115,6 @@
     }
     .info-section .container {
         flex-direction: column;
+         align-items: center;
     }
 }

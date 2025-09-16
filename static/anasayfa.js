@@ -1,8 +1,8 @@
 // static/anasayfa.js
 
 const galleryImages = [
-    '/static/images/ana-sayfa-arkaplan.jpg',
-    'https://i.ibb.co/1qG7XgP/galeri-2.jpg',
+    '/static/images/again.jpg',
+    '/static/images/delayed.jpg',
     'https://i.ibb.co/T4XhJmF/galeri-3.jpg'
 ];
 
