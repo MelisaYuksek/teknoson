@@ -1,10 +1,25 @@
 /* veltrixai.css */
 
-.veltrixai-page h2 {
-    font-size: 2.5rem;
+.veltrixai-page {
+    background: url('/static/images/veltrixai-arkaplan.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Tüm içeriği kapsayan beyaz konteyner */
+.content-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.veltrixai-page h2,
+.veltrixai-page h3 {
     text-align: center;
-    margin-bottom: 20px;
     color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
 }
 
 .intro-text {
@@ -13,14 +28,12 @@
     max-width: 800px;
     margin: 0 auto 50px;
     line-height: 1.6;
-    color: #555;
+    color: #444;
 }
 
 .team-section h3 {
-    text-align: center;
-    font-size: 2rem;
-    color: var(--text-color);
     margin-bottom: 40px;
+    color: var(--primary-color);
 }
 
 .team-cards {
@@ -31,7 +44,7 @@
 }
 
 .team-card {
-    background: white;
+    background: #f0f0f0;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);

@@ -81,6 +81,13 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.info-box img {
+    width: 100px; /* Görsel genişliğini 100 piksel yapar */
+    height: 100px; /* Görsel yüksekliğini 100 piksel yapar */
+    object-fit: contain; /* Görselin oranını koruyarak kutuya sığmasını sağlar */
+    margin-bottom: 20px;
+}
+
 .info-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);

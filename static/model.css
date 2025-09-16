@@ -1,45 +1,59 @@
 /* model.css */
 
+.model-page {
+    background: url('/static/images/model-arkaplan.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
 .model-page h2 {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 50px;
-    color: var(--primary-color);
+    color: white; /* Başlık rengini beyaz yapıyoruz ki okunabilsin */
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 .content-container {
     padding: 50px 20px;
 }
 
+/* İçeriği sarmalayan beyaz kutu */
+.content-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Yarı saydam beyaz arka plan */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px); /* Arka planı hafifçe bulanıklaştırır */
+}
+
 .content-item {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 40px;
     margin-bottom: 80px;
 }
 
-.content-item.reverse {
-    flex-direction: row-reverse;
-}
-
 .content-text {
     flex: 1;
+    min-width: 300px;
 }
 
 .content-text h3 {
     font-size: 1.8rem;
-    color: #333;
+    color: var(--primary-color);
     margin-bottom: 15px;
 }
 
 .content-text p {
     line-height: 1.6;
-    color: #666;
+    color: #444;
 }
 
 .content-image {
     flex: 1;
+    min-width: 300px;
     text-align: center;
 }
 
@@ -53,5 +67,8 @@
 @media (max-width: 768px) {
     .content-item {
         flex-direction: column;
+    }
+    .content-box {
+        margin: 10px 0;
     }
 }
