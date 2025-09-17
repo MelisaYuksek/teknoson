@@ -52,8 +52,8 @@
 }
 
 .content-image {
+    width: 500px;
     flex: 1;
-    min-width: 300px;
     text-align: center;
 }
 

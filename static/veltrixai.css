@@ -15,11 +15,13 @@
 }
 
 .content-box.full-width {
-    max-width: 900px; /* Belirli bir genişlik vererek ortalıyoruz */
+    max-width: 900px;
 }
 
-.team-section .content-box {
-    max-width: 1200px;
+.team-section {
+    max-width: 1200px; /* Ekip bölümünü daha geniş yapıyoruz */
+    margin: 0 auto; /* Sayfada ortalıyoruz */
+    padding: 20px;
 }
 
 .veltrixai-page h2,
