@@ -14,20 +14,22 @@
     margin: 20px auto;
 }
 
-.content-box.full-width {
-    max-width: 900px;
-}
-
 .team-section {
-    max-width: 1200px; /* Ekip bölümünü daha geniş yapıyoruz */
-    margin: 0 auto; /* Sayfada ortalıyoruz */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.veltrixai-page h2,
+.veltrixai-page h2 {
+    text-align: left;
+    color: #000d20;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
 .veltrixai-page h3 {
     text-align: center;
-    color: var(--primary-color);
+    color: #000d20;
     margin-bottom: 20px;
     font-size: 2.5rem;
 }
@@ -88,9 +90,74 @@
     color: #888;
 }
 
+/* GÜÇLENDİRİLMİŞ RESPONSIVE KURALLAR */
+
 @media (max-width: 768px) {
+    /* Genel sayfa düzeni */
+    main {
+        padding: 20px 15px !important;
+    }
+
+    .content-box {
+        padding: 20px !important;
+        margin: 10px auto !important;
+    }
+    
+    .team-section {
+        padding: 10px !important;
+    }
+    
+    /* Ekip Üyeleri Bölümü */
     .team-cards {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+    
+    .team-card {
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        max-width: 300px !important;
+    }
+
+    /* Başlıklar */
+    .veltrixai-page h2 {
+        font-size: 2rem !important;
+        text-align: center !important;
+    }
+    
+    .veltrixai-page h3 {
+        font-size: 2rem !important;
+        text-align: center !important;
+    }
+
+    /* Hamburger menü */
+    header h1 {
+        display: none !important;
+    }
+
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+
+    .header-nav {
+        position: fixed !important;
+        top: 0 !important;
+        right: -280px !important;
+        width: 280px !important;
+        height: 100vh !important;
+        background: #232B38 !important;
+        flex-direction: column !important;
+        padding: 80px 20px !important;
+        transition: right 0.3s ease !important;
+        z-index: 99 !important;
+    }
+
+    .header-nav.active {
+        right: 0 !important;
+    }
+
+    .mobile-overlay.active {
+        display: block !important;
     }
 }

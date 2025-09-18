@@ -63,6 +63,141 @@
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+/* Responsive Design */
+@media (max-width: 640px) {
+    .top-bar {
+        padding: 6px 20px;
+        font-size: 0.8rem;
+        gap: 15px;
+    }
+
+    header {
+        padding: 8px 20px;
+    }
+
+    /* Mobilde başlık metnini gizle */
+    header h1 {
+        display: none;
+    }
+
+    /* Hamburger menüyü göster */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    /* Desktop menüyü gizle */
+    .header-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: #232B38;
+        flex-direction: column;
+        gap: 0;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease;
+        z-index: 99;
+    }
+
+    .header-nav.active {
+        right: 0;
+    }
+
+    .header-nav a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #384551;
+        border-radius: 0;
+        font-size: 1.1rem;
+    }
+
+    .header-nav a:last-child {
+        border-bottom: none;
+    }
+
+    main {
+        padding: 20px 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+
+    .datetime-row {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar {
+        padding: 6px 15px;
+        font-size: 0.75rem;
+        gap: 10px;
+    }
+
+    header {
+        padding: 8px 15px;
+    }
+
+    .header-logo {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    main {
+        padding: 15px 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"] {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    #submit-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    .header-nav {
+        width: 100%;
+        right: -100%;
+    }
+
+    .datetime-row {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .detail-box ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .top-bar {
+        padding: 8px 60px;
+    }
+
+    header {
+        padding: 12px 60px;
+    }
+
+    .container {
+        max-width: 500px;
+        padding: 40px;
+    }
+}
 
 @media (max-width: 768px) {
     .content-item {

@@ -15,15 +15,15 @@ app = Flask(__name__)
 
 # NOT: Bu aralıklar, tahmin modelinin eğitildiği verilere göre ayarlanmalı
 FEATURE_RANGES = {
-    'temperature_2m_archive_best_match (K)': {'min': 235.9, 'max': 320.0},
-    'apparent_temperature_archive_best_match (K)': {'min': 229.8, 'max': 318.7},
-    'dew_point_2m_archive_best_match (K)': {'min': 232.7, 'max': 300.5},
+    'temperature_2m_archive_best_match (K)': {'min': 243.15, 'max': 313.15},
+    'apparent_temperature_archive_best_match (K)': {'min': 238.15, 'max': 318.15},
+    'dew_point_2m_archive_best_match (K)': {'min': 243.15, 'max': 298.15},
     'apparent_temperature_ecmwf_ifs (K)': {'min': 229.8, 'max': 318.7},
-    'surface_pressure_archive_best_match (hPa)': {'min': 727.4, 'max': 1038.5},
+    'surface_pressure_archive_best_match (hPa)': {'min': 950.0, 'max': 1030.0},
     'surface_pressure_ecmwf_ifs (hPa)': {'min': 727.4, 'max': 1038.5},
-    'surface_pressure_change': {'min': -0.990, 'max': 0.995},
-    'wind_gusts_10m_archive_best_match (km/h)': {'min': 1.1, 'max': 135.7},
-    'wind_direction_10m_archive_best_match (°)': {'min': 1.0, 'max': 360.0},
+    'surface_pressure_change': {'min': -0.5, 'max': 0.5},
+    'wind_gusts_10m_archive_best_match (km/h)': {'min': 2, 'max': 55},
+    'wind_direction_10m_archive_best_match (°)': {'min': 0.0, 'max': 360.0},
     'total_column_integrated_water_vapour_archive_best_match (kg/m²)': {'min': 0.6, 'max': 70.7},
     'CRSElapsedTime': {'min': -48.0, 'max': 435.0},
     'Distance': {'min': 31.0, 'max': 3043.0}

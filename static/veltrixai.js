@@ -1,14 +1,19 @@
-// static/veltrixai.js
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+    const mobileOverlay = document.querySelector('.mobile-overlay');
 
-/**
- * Bu dosya, VeltrixAI sayfasına özgü JavaScript işlevlerini içerir.
- * Örneğin:
- * - Ekip üyelerinin kartlarına tıklanıldığında detayları gösterme
- * - Sosyal medya ikonlarına animasyon ekleme
- */
+    if (menuToggle && mainNav && mobileOverlay) {
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            mainNav.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+        });
 
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("VeltrixAI JavaScript'i başarıyla yüklendi.");
-    
-    // Sayfanın içeriğine göre gelecekte buraya kodlar eklenebilir.
-});
+        mobileOverlay.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            mainNav.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+        });
+    }
+}); 
