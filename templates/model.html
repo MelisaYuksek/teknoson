@@ -1,85 +1,86 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Model Hakkında - Uçuş İptal Tahmin Sistemi</title>
-    <link rel="stylesheet" href="/static/style.css" />
-    <link rel="stylesheet" href="/static/model.css" />
-</head>
-<body>
-    <div class="mobile-overlay"></div>
-    <div class="top-bar">
-        <div class="search">🔎︎ Ara</div>
-        <div class="lang">🌍︎ TR-INT</div>
-    </div>
-    
-    <header>
-        <div class="header-logo">
-            <a href="/">
-                <img src="/static/images/veltrixai2.png" width="60" height="60" alt="Veltrix Logo" />
-            </a>
+    <!DOCTYPE html>
+    <html lang="tr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Model Hakkında - Uçuş İptal Tahmin Sistemi</title>
+        <link rel="stylesheet" href="/static/style.css" />
+        <link rel="stylesheet" href="/static/model.css" />
+    </head>
+    <body>
+        <div class="mobile-overlay"></div>
+        <div class="top-bar">
+            <div class="search">🔎︎ Ara</div>
+            <div class="lang">🌍︎ TR-INT</div>
         </div>
-        <h1><a href="/">UÇUŞ İPTAL TAHMİN SİSTEMİ</a></h1>
-        <nav class="header-nav">
-            <a href="/">ANASAYFA</a>
-            <a href="/tahmin-yap">TAHMİN YAP</a>
-            <a href="/model">MODEL</a>
-            <a href="/veltrixai">VELTRIXAI</a>
-        </nav>
-        <div class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
-
-    <main class="page-main model-page">
-        <section class="section-container content-container">
-            <h2>Model Yapısı ve Yaklaşımımız</h2>
-            <div class="content-item">
-                <div class="content-box">
-                    <div class="content-text">
-                        <h3>Özgün ve Genelleştirilebilir Çözüm</h3>
-                        <p>Türkiye'deki veri seti eksikliğine karşı, küresel veri setlerini yerel dinamiklerle (hava durumu gibi) birleştiren özgün bir yaklaşım geliştirdik. Bu sayede, modelimiz herhangi bir coğrafyaya kolayca uyarlanabilir, tamamen genelleştirilebilir bir yapıya sahiptir.</p>
-                    </div>
-                </div>
-               <div class="content-box">
-                    <div class="content-image">
-                        <img src="/static/images/f1score.png" alt="Karar Desteği" />
-                    </div>
-                </div><div class="content-box">
-                    <div class="content-image">
-                        <img src="/static/images/shap.png" alt="Karar Desteği" />
-                    </div>
-                </div>
+        
+        <header>
+            <div class="header-logo">
+                <a href="/">
+                    <img src="/static/images/veltrixai2.png" width="60" height="60" alt="Veltrix Logo" />
+                </a>
             </div>
+            <h1><a href="/">UÇUŞ İPTAL TAHMİN SİSTEMİ</a></h1>
+            <nav class="header-nav">
+                <a href="/">ANASAYFA</a>
+                <a href="/tahmin-yap">TAHMİN YAP</a>
+                <a href="/model">MODEL</a>
+                <a href="/veltrixai">VELTRIXAI</a>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
 
-            <div class="content-item">
-                <div class="content-box">
-                    <div class="content-text">
-                        <h3>Minimal Veri Girişi, Maksimum Değer</h3>
-                        <p>Kullanıcılarımızın sadece bilet üzerindeki temel bilgileri (kalkış/varış noktası, tarih) girerek yüksek doğrulukta tahminlere ulaşmasını sağlıyoruz. Geliştirdiğimiz model, veri sızıntısı olmayan yapısıyla güvenilir ve anlamlı çıktılar sunar.</p>
+        <main class="page-main model-page">
+            <section class="section-container content-container">
+                <h2>Model Yapısı ve Yaklaşımımız</h2>
+                <div class="content-item">
+                    <div class="content-box">
+                        <div class="content-text">
+                            <h3>Özgün ve Genelleştirilebilir Çözüm</h3>
+                            <p>Türkiye'deki veri seti eksikliğine karşı, küresel veri setlerini yerel dinamiklerle (hava durumu gibi) birleştiren özgün bir yaklaşım geliştirdik. Bu sayede, modelimiz herhangi bir coğrafyaya kolayca uyarlanabilir, tamamen genelleştirilebilir bir yapıya sahiptir.</p>
+                        </div>
                     </div>
+                <div class="content-box">
+                        <div class="content-image">
+                            <img src="/static/images/f1score.png" alt="Karar Desteği" />
+                        </div>
+                    </div><div class="content-box">
+                        <div class="content-image">
+                            <img src="/static/images/shap.png" alt="Karar Desteği" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item">
+                    <div class="content-box">
+                        <div class="content-text">
+                            <h3>Minimal Veri Girişi, Maksimum Değer</h3>
+                            <p>Kullanıcılarımızın sadece bilet üzerindeki temel bilgileri (kalkış/varış noktası, tarih) girerek yüksek doğrulukta tahminlere ulaşmasını sağlıyoruz. Geliştirdiğimiz model, veri sızıntısı olmayan yapısıyla güvenilir ve anlamlı çıktılar sunar.</p>
+                        </div>
+                    </div>
+                    
                 </div>
                 
-            </div>
+                <div class="content-item">
+                    <div class="content-box">
+                        <div class="content-text">
+                            <h3>Kapsamlı Karar Desteği</h3>
+                            <p>Amacımız sadece bir tahmin yapmak değil, bu tahmini kullanıcıların seyahat planlamalarını veya süreç optimizasyonlarını destekleyecek akıllı ve uygulanabilir kararlara dönüştürmektir.</p>
+                        </div>
+                    </div>
+                    
             
-            <div class="content-item">
-                <div class="content-box">
-                    <div class="content-text">
-                        <h3>Kapsamlı Karar Desteği</h3>
-                        <p>Amacımız sadece bir tahmin yapmak değil, bu tahmini kullanıcıların seyahat planlamalarını veya süreç optimizasyonlarını destekleyecek akıllı ve uygulanabilir kararlara dönüştürmektir.</p>
-                    </div>
-                </div>
-                
-           
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <footer>
-        <p>© 2025 Uçuş İptal Tahmin Sistemi | Tüm hakları saklıdır.</p>
-    </footer>
-    <script src="/static/script.js"></script>
-</body>
-</html>
+       <footer>
+    <p>© 2025 Uçuş İptal Tahmin Sistemi | Tüm hakları saklıdır.</p>
+</footer>
+<script src="/static/script.js"></script>
+<script src="/static/veltrixai.js"></script>
+    </body>
+    </html>
